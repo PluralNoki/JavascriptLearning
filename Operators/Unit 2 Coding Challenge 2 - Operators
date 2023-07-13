@@ -1,0 +1,42 @@
+//Arithmetic Operators
+
+let num1 = 4;
+let num2 = 7;
+console.log(num1*num2);
+
+let radius = 3;
+let area = radius**2*Math.PI;
+console.log(area);
+
+
+//Assignment Operators
+
+let count = 5;
+count+=2;
+console.log(count);
+
+let price = 10;
+price*=2.5;
+console.log(price);
+
+
+//Comparison Operators
+
+let age1 = 22;
+let age2 = 33;
+console.log(age1>age2);
+
+let name = 'Johnson';
+let notEqual = name != 'John Doe';
+console.log(notEqual);
+
+
+//Logical Operators
+
+let isMember = true;
+let hasCoupon = false;
+let freeShipping = isMember || hasCoupon;
+console.log(freeShipping);
+
+let num = 6;
+console.log(num!=0);
