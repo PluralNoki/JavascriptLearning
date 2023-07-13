@@ -1,0 +1,18 @@
+let name = 'Matthew';
+console.log(name);
+
+let age = 33;
+console.log(age);
+
+let isStudent = false;
+console.log(isStudent);
+
+let favoriteColors = ['blue', 'green', 'orange', 'gold', 'white'];
+console.log(favoriteColors);
+
+let person = {
+    name: 'Matthew',
+    age: 33,
+    isStudent: false
+}
+console.log(person);
