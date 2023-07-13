@@ -40,3 +40,14 @@ console.log(freeShipping);
 
 let num = 6;
 console.log(num!=0);
+
+
+//Conditional (Ternary) Operators
+
+let age = 44;
+let voteMessage = age > 18 ? 'You are old enough to vote' : 'You are not old enough to vote';
+console.log(voteMessage);
+
+let productPrice = 4.99;
+let regularPrice = 6.99;
+console.log(productPrice<=regularPrice?'The product is on sale':'The product is not on sale');
