@@ -10,4 +10,6 @@ let religion = {
 
 let people = [1,2,3,4]
 
+
 console.log(people[2]);
+console.log('new branch');
