@@ -1,0 +1,84 @@
+/*
+Create an array of products with at least 5 products. Each product should have the following properties:
+Name
+Price
+Quantity
+*/
+
+const products =[
+{name: 'Apple', price: 5, quantity: 200},
+{name: 'Orange', price: 3, quantity: 500},
+{name: 'Persimmon', price: 10, quantity: 150},
+{name: 'Melon', price: 7, quantity: 25},
+{name: 'Pineapple', price: 25, quantity: 50},
+];
+
+
+//Loop through the array using a for loop and print out the name and price of each product.
+
+for(let product of products){
+    console.log(product.name + ': ' + product.price);
+}
+
+
+//Use a while loop to find the product with the lowest price. Print out the name and price of the product.
+
+let cheapestIndex = 0;
+let index = 0;
+while(index<products.length)
+{
+    if(products[index].price<products[cheapestIndex].price)
+    {
+        cheapestIndex=index;
+    }
+    index++;
+}
+console.log(products[cheapestIndex].name + ' is cheapest at $' + products[cheapestIndex].price);
+
+
+//Use a for of loop to calculate the total value of all products in the array.
+
+let runningTotal = 0;
+for(let i = 0; i < products.length; i++)
+{
+    runningTotal += products[i].price;
+}
+console.log('Total value of all products: $' + runningTotal);
+
+
+//Use a for in loop to print out all the properties of each product in the array.
+for(let product of products)
+{
+    for(let key in product){
+        let dollarSign = key.toString()=='price'?'$':'';
+        let keyString = key.substring(0,1).toUpperCase() + key.substring(1);
+        console.log(keyString + ': ' + dollarSign +  product[key]);
+    }
+    console.log('\n');
+}
+
+
+//Create a program that prints the numbers from 1 to 100, 
+//but replaces multiples of 3 with "Fizz", multiples of 5 with "Buzz", 
+//and multiples of both 3 and 5 with "FizzBuzz".
+
+for(let i = 0; i <=100; i++)
+{
+    let print = i.toString();
+    let fizz = i%3==0;
+    let buzz = i%5==0;
+    if(fizz&&buzz)
+    {
+        print = 'FizzBuzz';
+    }
+    else if (fizz)
+    {
+        print = 'Fizz';
+    }
+    else if (buzz)
+    {
+        print = 'Buzz';
+    }
+    console.log(print);
+
+}
