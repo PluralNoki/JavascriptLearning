@@ -1,0 +1,54 @@
+//Create an array of student names (Add at least 5 names)
+let names = ['Galadriel', 'Elrond', 'Kate', 'Celebrimbor', 'Gandalf', 'Denethor'];
+
+
+//Find the length of an array
+console.log(names.length);
+
+
+/*
+Demonstrate the usage of array manipulation on 
+students array by showing example of pop, push, shift, unshift, splice functions
+*/
+
+//Pop
+let popLastName = names.pop();
+console.log(popLastName);
+console.log(names);
+
+//Push
+names.push('Radagast');
+console.log(names);
+
+//Shift
+let shiftFirstName = names.shift();
+console.log(shiftFirstName);
+console.log(names);
+
+//Unshift
+names.unshift('Durin');
+console.log(names);
+
+//Splice
+let splicedNames = names.splice(4,1);
+console.log(splicedNames);
+console.log(names);
+
+
+//Find out if array includes the value ‘John’
+let includesJohn = names.includes('John');
+console.log(includesJohn);
+
+
+//Find index of student ‘Kate’
+let indexOfKate = names.indexOf('Kate');
+console.log(indexOfKate);
+
+
+//Reverse your array and print last Index value
+names.reverse();
+console.log(names);
+
+
+//Find out if the first index value equals to last index value (Hint: use comparison operator. NOT LOOP )
+console.log(names[0]===names[names.length-1]?'The first and last values are equal':'The first and last values are not equal');
