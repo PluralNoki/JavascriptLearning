@@ -1,0 +1,133 @@
+/*
+Build Object for Employees: An employee can be represented as an 
+object with attributes such as name, age, salary, and job title. 
+It can also have functions like work, take a break, and attend a meeting.
+*/
+
+const Employee = {
+    name: 'Franklin',
+    age: 34,
+    salary: 45000,
+    jobTitle: 'Front End Developer',
+
+    work(){
+        console.log(`${this.name} does their job of ${this.jobTitle}.`);
+    },
+    takeABreak(){
+        console.log('does it work now');
+    }
+};
+
+
+/*
+Build Object for  Bank accounts: A bank account can be represented as an 
+object with attributes such as account number, balance, and account type. It can also 
+have functions like deposit, withdraw, and transfer.
+*/
+
+const Account = {
+    accountNumber: '123456789',
+    balance: 111.11,
+    accountType: 'Chequing',
+    
+    deposit(amount) {
+        balance+=amount;
+    },
+    withdraw(amount){
+        if(balance-amount>=0){
+            balance-=amount;
+            return true;
+        }
+        else{
+            console.log('Cannot withdraw that much - you will go into overdaft.');
+            return false;
+        }
+    },
+    transfer(amount, AccountFrom, AccountTo){
+        if(AccountFrom.withdraw(amount)){
+            AccountTo.deposit(amount);
+        }
+        else{
+            console.log('Cannot transfer that amount - the account will go into overdraft');
+        }
+    }
+};
+
+/*
+Build Object for  Dogs: A dog can be represented as an object with attributes such as breed, 
+age, and color. It can also have functions like bark, wag tail, and fetch.
+*/
+
+const Dog = {
+    name: 'George',
+    breed: 'Husky-Corgi',
+    age: 2.5,
+    color: 'Teal',
+
+    bark() {
+        let outputs = ['woof', 'bark', 'boof', 'yip'];
+        console.log(outputs[Math.floor(Math.random() * outputs.length)]);
+
+    },
+    wagTail(){
+        console.log(`${this.name} wags their tail.`);
+    },
+    fetch(){
+        console.log('You gotta throw them a bone first!');
+    }
+};
+
+
+/*
+Suppose you are building an e-commerce application and you want to create a new 
+Product object with property name, price, manufacturer, category
+*/
+
+const Product = {
+    name: 'New Product',
+    price: 9.99,
+    manufacturer: 'Bloated-Price Inc.',
+    category: 'Unnecessary'
+};
+
+//Now add a description property to the Product object you created
+Product.Description = 'A brand new, over hyped product for all your unnecessary needs!';
+
+//Suppose the price of the Product object you created earlier changes. Now the price increased by $10
+Product.price+=10;
+
+//Remove the description property from the Product object you created earlier.
+delete Product.Description;
+
+
+/*Suppose you are building a blog application and you want to display a list of all 
+the blog posts. You have an array of blog post objects, where each object has properties 
+such as title, author, date, and content. Find out if date field is empty on any object
+*/
+
+const blogPosts = [
+    {
+    title: 'The Life And Death and Death and Death of Edgar Allen Poe',
+    author: 'Allen Edgar Poe',
+    date: '1887-01-05',
+    content: 'Once upon a time, Edgar Allen Poe died. The next day he did it again.'
+    },
+    {
+        title: 'The Lies of Edgar Allen Poes Supposed Immortality',
+        author: 'Poedger Ellan Aeg',
+        date: '3232-12-23',
+        content: 'Once upon a time, Edgar Allen Poe died. He never rose again, despite proof to the counter.'
+    },
+    {
+        title: 'The Fued Between Edgar Allen Poes Descendants',
+        author: 'Edgan Pogar Al',
+        date: '',
+        content: 'Once upon a time, Edgar Allen Poe died. This was a very bad mistake.'
+    }
+];
+for(let i = 0; i < blogPosts.length; i++){
+    if(blogPosts[i].date===''){
+        console.log(`The blog post ${blogPosts[i].title} has no data in their dateField`);
+    }
+}
+
